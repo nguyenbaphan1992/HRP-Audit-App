@@ -1,0 +1,5 @@
+{
+  "name": "HRP Audit App",
+  "description": "Offline-first Social Compliance Audit tool for HRP assessment with CAP generation and Excel/PDF reporting.",
+  "requestFramePermissions": []
+}

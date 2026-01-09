@@ -1,0 +1,20 @@
+{
+  "short_name": "HRP Audit",
+  "name": "HRP Social Compliance Audit Tool",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192.png?text=HRP",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://via.placeholder.com/512.png?text=HRP",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1e40af",
+  "background_color": "#ffffff"
+}
