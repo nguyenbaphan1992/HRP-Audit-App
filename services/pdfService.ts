@@ -1,5 +1,5 @@
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+import autoTable from 'jspdf-autotable';
 import { ProjectData } from '../types';
 import { getStats, calculateGrade, CHAPTER_TITLES, getChapterNumber } from '../utils';
 
@@ -29,7 +29,7 @@ export const generatePDFReport = async (project: ProjectData) => {
 
   // Stats Table
   const stats = getStats(project.requirements);
-  doc.autoTable({
+  autoTable(doc, {
     startY: 120,
     head: [['Metric', 'Count']],
     body: [
@@ -58,7 +58,7 @@ export const generatePDFReport = async (project: ProjectData) => {
     cap.due_date
   ]);
 
-  doc.autoTable({
+  autoTable(doc, {
     startY: 30,
     head: [['ID', 'Priority', 'Status', 'Finding', 'Action', 'Due Date']],
     body: capRows,
@@ -89,7 +89,7 @@ export const generatePDFReport = async (project: ProjectData) => {
       d.remarks || ''
   ]) : [];
 
-  doc.autoTable({
+  autoTable(doc, {
       startY: 35,
       head: [['No', 'Category', 'Document', 'Who', 'Avail.', 'Remarks']],
       body: docRows,
